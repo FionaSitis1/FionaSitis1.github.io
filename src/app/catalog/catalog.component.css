@@ -1,0 +1,12 @@
+button{
+    /* float: right; */
+    text-decoration:underline;
+    font-size: 12px;
+    
+}
+
+.mybutton{
+    display: flex;
+    justify-content: center;
+    float: right;
+}
