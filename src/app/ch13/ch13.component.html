@@ -1,6 +1,6 @@
 <p>Chapter 13. They say I got a lot of water in my brain</p>
 <br>
   <div *ngFor="let paragraph of blog.paragraphs">
-    <p>{{paragraph}}</p>
+    <p onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" >{{paragraph}}</p>
     <br>
   </div>
