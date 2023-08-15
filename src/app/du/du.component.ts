@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DuComponent {
 
+  private _chapter = 20 // TODO: this will be modified for each updates
+
+  
 }

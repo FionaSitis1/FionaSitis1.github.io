@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Novel } from 'src/novel';
+import { Novel } from 'src/assets/interface/novel';
 import { FileReadService } from '../file-read.service';
 
 @Component({
@@ -18,10 +18,10 @@ export class MainComponent implements OnInit{
 
   getAllNovels(){
     this.filereadservice.getAllNovel().subscribe(novels =>{
-      console.log(novels)
       this.posts = novels;
     })
   }
 
 
 }
+

@@ -3,10 +3,13 @@
 
 <button mat-button [matMenuTriggerFor]="menu">Chapter Index &darr;</button>
 <mat-menu #menu="matMenu">
-<li *ngFor="let chapter of chapterList">
-    <a mat-menu-item [routerLink]=[chapter.routePath]>
-        {{ chapter.linkName }}
+<li *ngFor="let cha of chapter">
+
+
+    <a mat-menu-item [routerLink]=[cha.id]>
+        {{ cha.linkName }}
     </a> 
+
 </li>
 </mat-menu>
 
