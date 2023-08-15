@@ -17,11 +17,17 @@ import { Ch14Component } from './ch14/ch14.component';
 import { Ch15Component } from './ch15/ch15.component';
 import { Ch16Component } from './ch16/ch16.component';
 import { Ch17Component } from './ch17/ch17.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [   {
   path: '',
-  redirectTo: 'ch1',
+  redirectTo: 'main',
   pathMatch: 'full'
+},
+{
+  path: 'main',
+  component: MainComponent,
 },
 {
   path: 'ch1',
@@ -81,7 +87,7 @@ const routes: Routes = [   {
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), HttpClientModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

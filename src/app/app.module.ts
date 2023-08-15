@@ -27,7 +27,10 @@ import { Ch12Component } from './ch12/ch12.component';
 import { Ch13Component } from './ch13/ch13.component';
 import { Ch14Component } from './ch14/ch14.component';
 import { Ch15Component } from './ch15/ch15.component';
-import { Ch16Component } from './ch16/ch16.component'
+import { Ch16Component } from './ch16/ch16.component';
+import { MainComponent } from './main/main.component'
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,8 @@ import { Ch16Component } from './ch16/ch16.component'
     Ch13Component,
     Ch14Component,
     Ch15Component,
-    Ch16Component
+    Ch16Component,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,9 @@ import { Ch16Component } from './ch16/ch16.component'
     MatSelectModule,
     FormsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

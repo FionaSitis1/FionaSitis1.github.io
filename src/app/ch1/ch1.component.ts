@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FileReadService } from '../file-read.service';
 import { Blog } from '../../blog';
 
 @Component({
@@ -6,8 +7,43 @@ import { Blog } from '../../blog';
   templateUrl: './ch1.component.html',
   styleUrls: ['./ch1.component.css']
 })
-export class Ch1Component {
+export class Ch1Component implements OnInit, OnDestroy {
   blog = BLOG1;
+
+  public _chap: any;
+  subscriptions: Array<any> = [];
+
+  constructor(private filereadService: FileReadService){}
+
+  ngOnInit(): void {
+    // this.getChapter();
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(s => s.unsubscribe());
+  }
+
+  // getChapter(): void {
+  //   this.subscriptions.push(
+  //     this.filereadService.getSTLFile().subscribe(
+  //       (response: any) => {
+  //         let fulltext = response.split(",")
+  //          let start = fulltext.indexOf(fulltext.find(
+  //           (chp: string) => chp == "'（一）'"
+  //         ));
+  //         console.log(start)
+  //         let end = fulltext.indexOf(fulltext.find(
+  //           (chp: string) => chp == "'（三）'"
+  //         ));
+  //         console.log(end)
+
+  //         this._chap = response.slice(start, end)
+  //       }
+  //     )
+  //   );
+  // }
+  
+
 }
 
 export const BLOG1: Blog = {
@@ -207,3 +243,4 @@ export const BLOG1: Blog = {
     '到这一刻为止，一个小忙还只是一个小忙，暂时无伤大雅。刘恋和薛凯琪也没觉得这个小忙还能有点什么后续的蝴蝶效应。',
   ]
 };
+
