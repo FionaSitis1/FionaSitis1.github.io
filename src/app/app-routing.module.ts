@@ -19,15 +19,25 @@ import { Ch16Component } from './ch16/ch16.component';
 import { Ch17Component } from './ch17/ch17.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
+import { SomebodyToLoveComponent } from './somebody-to-love/somebody-to-love.component';
+import { DuComponent } from './du/du.component';
 
 const routes: Routes = [   {
   path: '',
-  redirectTo: 'main',
+  redirectTo: 'ch1',
   pathMatch: 'full'
 },
 {
   path: 'main',
   component: MainComponent,
+},
+{
+  path: 'somebody-to-love',
+  component: SomebodyToLoveComponent,
+},
+{
+  path: '赌',
+  component: DuComponent,
 },
 {
   path: 'ch1',

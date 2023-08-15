@@ -31,6 +31,10 @@ import { Ch16Component } from './ch16/ch16.component';
 import { MainComponent } from './main/main.component'
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RlqHeaderComponent } from './rlq-header/rlq-header.component';
+import { SomebodyToLoveComponent } from './somebody-to-love/somebody-to-love.component';
+import { DuComponent } from './du/du.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,10 @@ import {MatListModule} from '@angular/material/list';
     Ch14Component,
     Ch15Component,
     Ch16Component,
-    MainComponent
+    MainComponent,
+    RlqHeaderComponent,
+    SomebodyToLoveComponent,
+    DuComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +73,8 @@ import {MatListModule} from '@angular/material/list';
     MatMenuModule,
     MatButtonModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
