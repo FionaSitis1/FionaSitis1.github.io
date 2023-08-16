@@ -1,4 +1,4 @@
-#If update next chapter:
+If update next chapter:
 
 On branch gh-pages:
 git generate component ch18
@@ -6,7 +6,7 @@ In ch18 component: do everything the same in html and ts
 On app-routing.module.ts: update the routing
 On catalog component: 
 1. update the link in ts
-2. 2. In constructor, modffy second else if make it (event.url == ‘/ch18’)
+2. In constructor, modffy second else if make it (event.url == ‘/ch18’)
 
 
 
