@@ -26,7 +26,7 @@ export class CatalogComponent implements OnInit {
           x.style.display = "none";
           y.style.display = "block";
         }
-        else if(event.url == '/ch17')
+        else if(event.url == '/ch18')
         {
           x.style.display = "block";
           y.style.display = "none";
@@ -114,7 +114,10 @@ export class CatalogComponent implements OnInit {
       routePath: '/ch17',
       linkName: '17. Got no feel, I got no rhythm'
     },
-    
+    {
+      routePath: '/ch18',
+      linkName: '18. I just keep losing my beat'
+    },
   ]
 
   ngOnInit(): void {

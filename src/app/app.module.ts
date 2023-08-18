@@ -14,7 +14,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { Ch1Component } from './ch1/ch1.component';
 import { Ch2Component } from './ch2/ch2.component';
 import { Ch3Component } from './ch3/ch3.component';
-import { Ch17Component } from './ch17/ch17.component';
 import { Ch4Component } from './ch4/ch4.component';
 import { Ch5Component } from './ch5/ch5.component';
 import { Ch6Component } from './ch6/ch6.component';
@@ -27,8 +26,9 @@ import { Ch12Component } from './ch12/ch12.component';
 import { Ch13Component } from './ch13/ch13.component';
 import { Ch14Component } from './ch14/ch14.component';
 import { Ch15Component } from './ch15/ch15.component';
-import { Ch16Component } from './ch16/ch16.component'
-
+import { Ch16Component } from './ch16/ch16.component';
+import { Ch17Component } from './ch17/ch17.component';
+import { Ch18Component } from './ch18/ch18.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +49,8 @@ import { Ch16Component } from './ch16/ch16.component'
     Ch13Component,
     Ch14Component,
     Ch15Component,
-    Ch16Component
+    Ch16Component,
+    Ch18Component
   ],
   imports: [
     BrowserModule,
