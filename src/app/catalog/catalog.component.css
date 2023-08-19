@@ -2,6 +2,7 @@ button{
     /* float: right; */
     text-decoration:underline;
     font-size: 12px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     
 }
 
@@ -9,4 +10,5 @@ button{
     display: flex;
     justify-content: center;
     float: right;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
