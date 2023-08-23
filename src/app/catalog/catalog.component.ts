@@ -26,7 +26,7 @@ export class CatalogComponent implements OnInit {
           x.style.display = "none";
           y.style.display = "block";
         }
-        else if(event.url == '/ch18')
+        else if(event.url == '/ch19')
         {
           x.style.display = "block";
           y.style.display = "none";
@@ -117,6 +117,10 @@ export class CatalogComponent implements OnInit {
     {
       routePath: '/ch18',
       linkName: '18. I just keep losing my beat'
+    },
+    {
+      routePath: '/ch19',
+      linkName: "19. I ain't gonna face no defeat"
     },
   ]
 
