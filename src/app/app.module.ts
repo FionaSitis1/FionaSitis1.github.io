@@ -29,8 +29,8 @@ import { Ch15Component } from './ch15/ch15.component';
 import { Ch16Component } from './ch16/ch16.component';
 import { Ch17Component } from './ch17/ch17.component';
 import { Ch18Component } from './ch18/ch18.component';
-import { Ch19Component } from './ch19/ch19.component'
-
+import { Ch19Component } from './ch19/ch19.component';
+import { Ch20Component } from './ch20/ch20.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +53,8 @@ import { Ch19Component } from './ch19/ch19.component'
     Ch15Component,
     Ch16Component,
     Ch18Component,
-    Ch19Component
+    Ch19Component,
+    Ch20Component
   ],
   imports: [
     BrowserModule,

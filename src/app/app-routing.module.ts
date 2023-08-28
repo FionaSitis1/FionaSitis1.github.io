@@ -19,7 +19,7 @@ import { Ch16Component } from './ch16/ch16.component';
 import { Ch17Component } from './ch17/ch17.component';
 import { Ch18Component } from './ch18/ch18.component';
 import { Ch19Component } from './ch19/ch19.component';
-
+import { Ch20Component } from './ch20/ch20.component';
 const routes: Routes = [   {
   path: '',
   redirectTo: 'ch1',
@@ -86,6 +86,10 @@ const routes: Routes = [   {
 {
   path: 'ch19',
   component: Ch19Component,
+},
+{
+  path: 'ch20',
+  component: Ch20Component,
 },
 ];
 
