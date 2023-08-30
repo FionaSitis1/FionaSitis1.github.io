@@ -1,4 +1,4 @@
 export interface Blog {
-  id:number;
+    id:number;
     text: string[];
   }

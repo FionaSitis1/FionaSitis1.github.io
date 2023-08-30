@@ -1,0 +1,10 @@
+h6{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-size: 20px;
+}

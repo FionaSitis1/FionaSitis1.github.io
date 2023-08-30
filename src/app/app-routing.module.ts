@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
 import { SomebodyToLoveComponent } from './somebody-to-love/somebody-to-love.component';
 import { DuComponent } from './du/du.component';
+import { GodzillaComponent } from './godzilla/godzilla.component';
+import { ConspiratorsComponent } from './conspirators/conspirators.component';
 
 const routes: Routes = [   {
   path: '',
@@ -15,13 +17,21 @@ const routes: Routes = [   {
   component: MainComponent,
 },
 {
-  path: 'somebody-to-love',
+  path: 'somebody-to-love/:id',
   component: SomebodyToLoveComponent,
 },
 {
-  path: '赌',
+  path: 'bet/:id',
   component: DuComponent,
-}
+},
+{
+  path: 'godzilla/:id',
+  component: GodzillaComponent,
+},
+{
+  path: 'conspirators/:id',
+  component: ConspiratorsComponent,
+},
 ];
 
 @NgModule({

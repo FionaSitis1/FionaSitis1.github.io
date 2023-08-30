@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import { FileReadService } from '../file-read.service';
 
 
@@ -15,93 +15,99 @@ export class CatalogComponent implements OnInit {
   chapter: any;
   @Output() theCurrentChp = new EventEmitter<number>();
   current_index: number; 
+  max_chap: number;
+  hasPrev: boolean;
+  hasNext: boolean;
 
 
 
-  constructor(private router: Router, private fileRead: FileReadService) { 
-    this.router.events.subscribe((event) => {
-
-      if(event instanceof NavigationStart){
-        console.log(event.url)
-        if(event.url == "/somebody-to-love"){
-
-        }
-        else if(event.url == "/赌"){
-
-        }
-      }
-
-
-      // var x = document.getElementById("prev")!;
-      // var y = document.getElementById("next")!;
-      // if(event instanceof NavigationStart){
-      //   if(event.url == '/' || event.url =='/ch1'){
-      //     x.style.display = "none";
-      //     y.style.display = "block";
-      //   }
-      //   else if(event.url == '/ch17')
-      //   {
-      //     x.style.display = "block";
-      //     y.style.display = "none";
-      //   }
-      //  else{
-      //   x.style.display = "block";
-      //     y.style.display = "block";
-      //   }
-      //   }
-    }) 
-  }
+  constructor(private router: Router, private fileRead: FileReadService) {
+  
+    }
  
 
 
   ngOnInit(): void {
-    this.current_index = 1; //initiate with first chapter
+    this.current_index = 1; 
     this.changeChapter(this.current_index);
-    console.log(this.router.url);
-    if(this.router.url === "/somebody-to-love"){
+    this.hasPrev = false;
+    // manually check which novel catalog to return
+    if(this.router.url.indexOf("/somebody-to-love") > -1){
       this.fileRead.getSTLCatalog().subscribe(
         response => {
           this.chapter = response;
+          this.max_chap = response.length;
+          this.checkChapter(this.current_index, this.max_chap);
+
         }
       )
-    }else if(this.router.url === "/赌"){
+    }else if(this.router.url.indexOf("/bet") > -1){
       this.fileRead.getDuCatalog().subscribe(
         response => {
           this.chapter = response;
+          this.max_chap = response.length;
+          this.checkChapter(this.current_index, this.max_chap);
+        }
+      )
+    }else if(this.router.url.indexOf("/conspirators") > -1){
+      this.fileRead.getconspiratorsCatalog().subscribe(
+        response => {
+          this.chapter = response;
+          this.max_chap = response.length;
+          this.checkChapter(this.current_index, this.max_chap);
+        }
+      )
+    }else if(this.router.url.indexOf("/godzilla") > -1){
+      this.fileRead.getGodzillaCatalog().subscribe(
+        response => {
+          this.chapter = response;
+          this.max_chap = response.length;
+          this.checkChapter(this.current_index, this.max_chap);
         }
       )
     }
-     
+
+  }
+
+  checkChapter(current: number, max: number){
+    if(current < max){
+      this.hasNext = true;
+      if(current != 1){
+        this.hasPrev = true;
+      }
+    }else if(current == max){
+      this.hasNext = false;
+    }else if(current == 1){
+      this.hasPrev = false;
+    }
   }
 
 
-
-
-
-  
-
   previousCha(){
-    // let newUrl = this.router.url.toString();
-    // let indnum = (Number(newUrl.substring(3,)) - 1).toString();
-    // let newChp = ('ch').concat(indnum);
-    // this.router.navigateByUrl(newChp);
     this.current_index-=1;
     this.changeChapter(this.current_index);
- 
+    this.checkChapter(this.current_index, this.max_chap);
   }
 
   nextCha(){
-    // let newUrl = this.router.url.toString();
-    // let indnum = (Number(newUrl.substring(3,)) + 1).toString();
-    // let newChp = ('ch').concat(indnum);
-    // this.router.navigateByUrl(newChp);
     this.current_index+=1;
     this.theCurrentChp.emit(this.current_index);
-
+    this.checkChapter(this.current_index, this.max_chap);
   }
 
   changeChapter(value: number){
+    this.current_index = value;
     this.theCurrentChp.emit(value)
+    this.checkChapter(this.current_index, this.max_chap);
+  }
+
+  catalogChange(value: number){
+
+    this.changeChapter(value);
+  }
+
+  backtoMain(){
+    this.router.navigate(['/main']);
   }
 
 

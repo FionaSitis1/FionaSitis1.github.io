@@ -1,9 +1,23 @@
-.cn-font{
-    font-family: "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
 
+
+.mobile{
+    display: none;
 }
 
-.post{
-    text-decoration: none; color:black;
+
+@media (max-width: 640px) and (min-width: 320px){
+    .mobile{
+        display: block;
+    }
+    .laptop{
+        display: none;
+    }
+
+    .title{
+        margin: 10px 5px;
+        text-align: center;
+        color: white;
+        background-color: purple;
+    }
 }
 

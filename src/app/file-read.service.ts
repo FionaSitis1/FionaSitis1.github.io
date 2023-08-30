@@ -1,25 +1,32 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Blog } from 'src/assets/interface/blog';
 import { Novel } from 'src/assets/interface/novel';
 import { IMenuLink } from 'src/assets/interface/imenulink'
+import { stlBLOGS } from '../assets/db/stl/file'
+import { duBLOGS } from '../assets/db/du/file'
+import { godzillaBLOGS } from 'src/assets/db/godzilla/file';
+import { conspiratorsBLOGS } from 'src/assets/db/conspirators/file';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FileReadService {
   private fileText: any;
-  private _allNovel = "assets/json/novel.json"
+  private _allNovel = "assets/db/novel.json"
 
 // stl
-  private _stlCatalog = "assets/json/stl/chp.json";
-  private _stlBlog = "assets/json/stl/file.json";
+  private _stlCatalog = "assets/db/stl/chp.json";
 
 // Du
-  private _duCatalog = "assets/json/du/chp.json";
-  private _duBlog = "assets/json/du/file.json";
+  private _duCatalog = "assets/db/du/chp.json";
+
+// godzilla
+  private _godzillaCatalog = "assets/db/godzilla/chp.json";
  
+  // conpirator
+  private _conspiratorCatalog = "assets/db/conspirators/chp.json";
 
 
 
@@ -36,21 +43,46 @@ export class FileReadService {
   }
 
   // get stl blog by chapter
-  getSTLBlogByChapter(chp: number): Observable<Blog[]>{
-    return this.http.get<Blog[]>(this._stlBlog)
+  getSTLByChapter(id: number): Observable<Blog>{
+    const blog = stlBLOGS.find(b => b.id == id)!;
+    return of(blog);
   }
 
 
 
-// get du catalog info TODO:
+// get du catalog info
   getDuCatalog(): Observable<IMenuLink[]>{
     return this.http.get<IMenuLink[]>(this._duCatalog)
   }
 
-  // get du blog by chapter TODO:
-  getDuBlogByChapter(chp: number): Observable<Blog[]>{
-    return this.http.get<Blog[]>(this._duBlog)
+  // get du blog by chapter 
+  getDuByChapter(id: number): Observable<Blog>{
+    const blog = duBLOGS.find(b => b.id == id)!;
+    return of(blog);
   }
+
+  // get godzilla catalog info
+  getGodzillaCatalog(): Observable<IMenuLink[]>{
+    return this.http.get<IMenuLink[]>(this._godzillaCatalog)
+  }
+
+  // get godzilla blog by chapter 
+  getGodzillaByChapter(id: number): Observable<Blog>{
+    const blog = godzillaBLOGS.find(b => b.id == id)!;
+    return of(blog);
+  }
+
+    // get conspirators catalog info
+    getconspiratorsCatalog(): Observable<IMenuLink[]>{
+      return this.http.get<IMenuLink[]>(this._conspiratorCatalog)
+    }
+  
+    // get conspirators blog by chapter 
+    getConspiratorsByChapter(id: number): Observable<Blog>{
+      const blog = conspiratorsBLOGS.find(b => b.id == id)!;
+      return of(blog);
+    }
+
 
 
 

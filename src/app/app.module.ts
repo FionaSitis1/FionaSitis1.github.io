@@ -18,6 +18,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RlqHeaderComponent } from './rlq-header/rlq-header.component';
 import { SomebodyToLoveComponent } from './somebody-to-love/somebody-to-love.component';
 import { DuComponent } from './du/du.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule,FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import fontawesome from '@fortawesome/fontawesome'
+import brands from '@fortawesome/fontawesome-free-brands';
+import { GodzillaComponent } from './godzilla/godzilla.component';
+import { ConspiratorsComponent } from './conspirators/conspirators.component';
+import { MobileBackgroundComponent } from './mobile-background/mobile-background.component';
+import { MobileFloatingPageComponent } from './mobile-floating-page/mobile-floating-page.component';
+import { NovelListComponent } from './novel-list/novel-list.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +37,13 @@ import { DuComponent } from './du/du.component';
     MainComponent,
     RlqHeaderComponent,
     SomebodyToLoveComponent,
-    DuComponent
+    DuComponent,
+    FooterComponent,
+    GodzillaComponent,
+    ConspiratorsComponent,
+    MobileBackgroundComponent,
+    MobileFloatingPageComponent,
+    NovelListComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +57,16 @@ import { DuComponent } from './du/du.component';
     MatButtonModule,
     MatDividerModule,
     MatListModule,
-    NgbModule
+    FontAwesomeModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary){
+    library.addIcons(faFilm);
+    fontawesome.library.add(brands)
+  }
+ }

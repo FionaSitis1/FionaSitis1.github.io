@@ -3,5 +3,4 @@ export interface Novel {
     intro: string;
     last_updated: string;
     link: string
-
   }

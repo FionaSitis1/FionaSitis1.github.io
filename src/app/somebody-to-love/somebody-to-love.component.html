@@ -1,6 +1,9 @@
-<h6>Some Body to Love</h6>
+<h6>Somebody to Love</h6>
 
-<app-catalog (theCurrentChp) = "receiveChp($event)"></app-catalog>
+<app-catalog (theCurrentChp) = "chpChange($event)"></app-catalog>
+<br><br>
+<p>Chapter {{current_chap}}</p>
+<br><br>
 <ng-container *ngIf="blog">
 <div *ngFor="let paragraph of blog.text">
    
