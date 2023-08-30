@@ -28,6 +28,7 @@ import { ConspiratorsComponent } from './conspirators/conspirators.component';
 import { MobileBackgroundComponent } from './mobile-background/mobile-background.component';
 import { MobileFloatingPageComponent } from './mobile-floating-page/mobile-floating-page.component';
 import { NovelListComponent } from './novel-list/novel-list.component';
+import { NovelGridComponent } from './novel-grid/novel-grid.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { NovelListComponent } from './novel-list/novel-list.component';
     ConspiratorsComponent,
     MobileBackgroundComponent,
     MobileFloatingPageComponent,
-    NovelListComponent
+    NovelListComponent,
+    NovelGridComponent
   ],
   imports: [
     BrowserModule,
