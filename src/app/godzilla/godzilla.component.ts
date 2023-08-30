@@ -32,6 +32,7 @@ export class GodzillaComponent {
 
   ngOnInit(): void {
     this.receiveChp()
+    window.scroll(0,0);
 }
 
 receiveChp(){

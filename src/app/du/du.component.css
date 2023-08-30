@@ -8,3 +8,26 @@ h6{
     /* font-family: 'Times New Roman', Times, serif; */
     font-size: 20px;
 }
+
+.container{
+    margin: 0px 100px;
+}
+
+@media (max-width: 640px) and (min-width: 320px){
+    .container{
+        margin: 0px 5px;
+    }
+ 
+}
+
+p{
+    font-size: 14px;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
