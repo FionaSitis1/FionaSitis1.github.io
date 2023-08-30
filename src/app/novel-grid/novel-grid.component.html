@@ -1,0 +1,19 @@
+<br>
+<div *ngFor="let post of posts" class="content">
+    <mat-card class="novel-card"  [routerLink]="[post.link, 1]">
+        <mat-card-header >
+            <mat-card-title style = "font-weight: 400; font-size: 20px; margin: 5px 2px;">{{post.title}}</mat-card-title>
+            
+        </mat-card-header>
+        <img mat-card-image src={{post.img}} alt="rlq">
+        <mat-card-content>
+            <br>
+
+                <p>
+                    {{post.intro}}
+                </p>
+                <mat-card-subtitle style = "font-family: Karma, sans-serif; margin-left: 10px;">
+                    Last Updated: {{post.last_updated}}</mat-card-subtitle>
+        </mat-card-content>
+    </mat-card>
+</div>
