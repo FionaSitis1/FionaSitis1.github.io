@@ -1,1 +1,14 @@
-<app-catalog></app-catalog>
+<h6>Somebody to Love</h6>
+
+<app-catalog (theCurrentChp) = "chpChange($event)"></app-catalog>
+<br><br>
+<p>Chapter {{current_chap}}</p>
+<br><br>
+<ng-container *ngIf="blog">
+<div *ngFor="let paragraph of blog.text">
+   
+    <p onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" >{{paragraph}}</p>
+    <br>
+
+  </div>
+</ng-container>

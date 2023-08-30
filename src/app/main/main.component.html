@@ -1,21 +1,30 @@
-<div *ngFor="let post of posts">
-<div class="row">
-
-    <div class="col-lg-8 col-md-10 mx-auto">
-        <a class = "post" [routerLink]=[post.link]>
-   
-      <h1 [textContent]="post.title"></h1>
-  
-      <h6 class="post-content cn-font" style = "font-size: smaller;"[textContent]="post.intro"></h6>
-  
-      <p style="color: grey; text-align: center;" class="post-meta cn-font"><i>Last Updated: </i>
-        <i><a href="#" style="color: grey; text-decoration: none;" [textContent]="post.last_updated"></a></i>
-      </p>
-      <hr>
-            
-    </a>
-    </div>
-
-    <!-- Pager -->
+<div class = "mobile">
+  <div class="top">
+    <h3 class = "title">
+      - All Novels - 
+    </h3>
   </div>
+  
+<app-novel-grid></app-novel-grid>
 </div>
+
+
+<div class = "laptop">
+<app-rlq-header></app-rlq-header>
+
+
+
+
+
+<br>
+<br>
+
+
+
+
+<app-novel-list></app-novel-list>
+  </div>
+  <br><br>
+
+
+<app-footer></app-footer>

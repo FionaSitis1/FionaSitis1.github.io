@@ -1,15 +1,28 @@
+<button mat-button (click) = "backtoMain()">Main</button>
 <div class ="mybutton">
-<button mat-button (click)="previousCha();" id="prev">←Previous Chapter</button>
+
+<span *ngIf="hasPrev">
+    <button mat-button (click)="previousCha();" id="prev">←Previous Chapter</button>
+</span>
+
 
 <button mat-button [matMenuTriggerFor]="menu">Chapter Index &darr;</button>
+
 <mat-menu #menu="matMenu">
-<li *ngFor="let chapter of chapterList">
-    <a mat-menu-item [routerLink]=[chapter.routePath]>
-        {{ chapter.linkName }}
+<li *ngFor="let cha of chapter">
+
+
+    <a mat-menu-item  (click)=catalogChange(cha.id)>
+
+        {{ cha.linkName }}
     </a> 
+
 </li>
 </mat-menu>
 
+<span *ngIf="hasNext">
 <button mat-button (click)="nextCha()" id="next">Next Chapter→</button>
+</span>
+
 </div>
 <br>
