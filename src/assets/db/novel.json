@@ -14,17 +14,17 @@
         "img":"assets/image/image2.jpg"
     },
     {
-        "title":"同谋",
-        "intro": "二公后台 现实向造谣文学 HE 1W9 通篇车 搞脑子 一发完",
-        "last_updated": "July 4 2022",
-        "link": "/conspirators",
-        "img":"assets/image/image3.jpg"
-    },
-    {
         "title":"哥斯拉",
         "intro": "本来写完同谋时该说的都已经说完了，但是两位姐过于令人感动，不得不长打一篇2W5来致敬 纪实向 HE 一个关于由双向吃醋引发大战的故事. 上一次发贴时忘了说，如果两位蒸煮有幸看到，祝你们永远平安喜乐，祝你们永远被爱温暖，祝你们永远理想成真。我爱你们。",
         "last_updated": "July 31 2022",
         "link": "/godzilla",
         "img":"assets/image/image4.jpg"
+    },
+    {
+        "title":"同谋",
+        "intro": "二公后台 现实向造谣文学 HE 1W9 通篇车 搞脑子 一发完",
+        "last_updated": "July 4 2022",
+        "link": "/conspirators",
+        "img":"assets/image/image3.jpg"
     }
 ]

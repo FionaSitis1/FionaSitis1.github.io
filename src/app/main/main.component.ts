@@ -7,7 +7,7 @@ import { FileReadService } from '../file-read.service';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent{
+export class MainComponent implements OnInit{
 
 
 
@@ -16,6 +16,9 @@ export class MainComponent{
 
     ){}
 
+    ngOnInit(): void {
+      window.scrollTo(0,0);
+    }
 
 
 

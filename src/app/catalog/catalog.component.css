@@ -12,3 +12,14 @@ button{
     float: right;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
+.container{
+    margin: 0px 100px;
+}
+
+@media (max-width: 640px) and (min-width: 320px){
+    .container{
+        margin: 0px 0px;
+    }
+ 
+}

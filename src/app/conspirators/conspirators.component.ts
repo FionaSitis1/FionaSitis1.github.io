@@ -31,6 +31,7 @@ export class ConspiratorsComponent {
 
   ngOnInit(): void {
     this.receiveChp()
+    window.scrollTo(0,0);
 }
 
 receiveChp(){

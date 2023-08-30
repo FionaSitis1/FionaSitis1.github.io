@@ -25,10 +25,9 @@ import fontawesome from '@fortawesome/fontawesome'
 import brands from '@fortawesome/fontawesome-free-brands';
 import { GodzillaComponent } from './godzilla/godzilla.component';
 import { ConspiratorsComponent } from './conspirators/conspirators.component';
-import { MobileBackgroundComponent } from './mobile-background/mobile-background.component';
-import { MobileFloatingPageComponent } from './mobile-floating-page/mobile-floating-page.component';
 import { NovelListComponent } from './novel-list/novel-list.component';
 import { NovelGridComponent } from './novel-grid/novel-grid.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 
 @NgModule({
@@ -42,10 +41,9 @@ import { NovelGridComponent } from './novel-grid/novel-grid.component';
     FooterComponent,
     GodzillaComponent,
     ConspiratorsComponent,
-    MobileBackgroundComponent,
-    MobileFloatingPageComponent,
     NovelListComponent,
-    NovelGridComponent
+    NovelGridComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
