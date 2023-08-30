@@ -1,6 +1,6 @@
 <br>
 <div *ngFor="let post of posts" class="content">
-    <mat-card class="novel-card">
+    <mat-card class="novel-card"  [routerLink]="[post.link, 1]">
         <mat-card-header >
             <mat-card-title style = "font-weight: 400; font-size: 20px; margin: 5px 2px;">{{post.title}}</mat-card-title>
             
