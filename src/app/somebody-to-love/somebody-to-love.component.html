@@ -9,13 +9,12 @@
 <div *ngFor="let paragraph of blog.text">
    
     <p>{{paragraph}}</p>
-    <br>
 
   </div>
 </ng-container>
 
 </div>
-<app-catalog></app-catalog>
+<app-catalog (theCurrentChp) = "chpChange($event)"></app-catalog>
 
 
 <app-scroll-to-top></app-scroll-to-top>
