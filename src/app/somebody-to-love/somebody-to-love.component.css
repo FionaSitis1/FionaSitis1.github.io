@@ -30,3 +30,9 @@ p{
     -ms-user-select: none;
     user-select: none;
   }
+
+  hr{
+    border-style: none;
+    height: 0px;
+    margin-bottom: -2px;
+ }
