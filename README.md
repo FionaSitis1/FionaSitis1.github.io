@@ -1,13 +1,20 @@
-If update next chapter:
+## To update next chapter:
 
-On branch gh-pages:
-git generate component ch18
-In ch18 component: do everything the same in html and ts
-On app-routing.module.ts: update the routing
-On catalog component: 
-1. update the link in ts
-2. In constructor, modffy second else if make it (event.url == ‘/ch18’)
-
+1. Pull origin from both `gh-pages` and `develop` branch 
+2. Navigate to `develop` branch: 
+3. To update new chapter: 
+* On folder assets
+    *  In `novel.json`, change the update date
+    *  Under respective novel chapter, change in both `chp.jso` and `file.ts`
+* Run `git add .`
+* Run `git commit -m "COMMIT MESSAGE"`
+* Run `git push origin develop`
+4. In github, create new `pull request` (third tab), merge `develop` to `gh-pages`
+5. In local folder, run `git checkout gh-pages` and `git pull origin`
+6. Run `ng build --output-path docs --base-href /FionaSitis1.github.io/`
+7. Repeat same old task, find docs/index.html and delete contents in `href` until `<base href="/">`
+8. git add, commit add, no surprise. 
+9. Updated
 
 
 
