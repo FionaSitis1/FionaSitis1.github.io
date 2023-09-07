@@ -16,7 +16,11 @@
 8. git add, commit add, no surprise. 
 9. Updated
 
-
+## To update dependences
+1. On latest updated branch
+2. Delete folder node_modules
+3. Run `npm cache clean —force`
+4. Run `npm install `
 
 # Fish
 
