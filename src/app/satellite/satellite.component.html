@@ -1,0 +1,22 @@
+<h6>Satellite</h6>
+
+<app-catalog (theCurrentChp) = "chpChange($event)"></app-catalog>
+<br><br>
+<div class="container unselectable">
+<p>Chapter {{current_chap}}</p>
+<br><br>
+<ng-container *ngIf="blog">
+<div *ngFor="let paragraph of blog.text">
+   
+    <p>{{paragraph}}</p>
+    <hr>
+
+
+  </div>
+</ng-container>
+
+</div>
+<app-catalog (theCurrentChp) = "chpChange($event)"></app-catalog>
+
+
+<app-scroll-to-top></app-scroll-to-top>

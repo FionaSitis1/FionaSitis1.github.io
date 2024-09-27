@@ -28,6 +28,7 @@ import { ConspiratorsComponent } from './conspirators/conspirators.component';
 import { NovelListComponent } from './novel-list/novel-list.component';
 import { NovelGridComponent } from './novel-grid/novel-grid.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { SatelliteComponent } from './satellite/satellite.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     ConspiratorsComponent,
     NovelListComponent,
     NovelGridComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    SatelliteComponent
   ],
   imports: [
     BrowserModule,

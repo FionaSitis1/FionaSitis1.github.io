@@ -8,6 +8,7 @@ import { stlBLOGS } from '../assets/db/stl/file'
 import { duBLOGS } from '../assets/db/du/file'
 import { godzillaBLOGS } from 'src/assets/db/godzilla/file';
 import { conspiratorsBLOGS } from 'src/assets/db/conspirators/file';
+import { satelliteBLOGS } from 'src/assets/db/satellite/file';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,9 @@ export class FileReadService {
 
 // stl
   private _stlCatalog = "assets/db/stl/chp.json";
+
+// satellite
+  private _satelliteCatalog = "assets/db/satellite/chp.json";
 
 // Du
   private _duCatalog = "assets/db/du/chp.json";
@@ -36,6 +40,19 @@ export class FileReadService {
   getAllNovel(): Observable<Novel[]>{
     return this.http.get<Novel[]>(this._allNovel)
   }
+
+  // get satellite catalog info
+  getSatelliteCatalog(): Observable<IMenuLink[]>{
+    return this.http.get<IMenuLink[]>(this._satelliteCatalog)
+  }
+
+    // get satellite blog by chapter
+    getSatelliteByChapter(id: number): Observable<Blog>{
+      const blog = satelliteBLOGS.find(b => b.id == id)!;
+      return of(blog);
+    }
+
+
 
 // get stl catalog info
   getSTLCatalog(): Observable<IMenuLink[]>{

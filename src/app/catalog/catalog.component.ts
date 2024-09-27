@@ -64,7 +64,14 @@ export class CatalogComponent implements OnInit {
           this.checkChapter(this.current_index, this.max_chap);
         }
       )
-    }
+    }else if(this.router.url.indexOf("/satellite") > -1){
+      this.fileRead.getSatelliteCatalog().subscribe(
+        response => {
+          this.chapter = response;
+          this.max_chap = response.length;
+          this.checkChapter(this.current_index, this.max_chap);
+        }
+      )}
 
   }
 

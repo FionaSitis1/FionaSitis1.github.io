@@ -6,6 +6,7 @@ import { SomebodyToLoveComponent } from './somebody-to-love/somebody-to-love.com
 import { DuComponent } from './du/du.component';
 import { GodzillaComponent } from './godzilla/godzilla.component';
 import { ConspiratorsComponent } from './conspirators/conspirators.component';
+import { SatelliteComponent } from './satellite/satellite.component';
 
 const routes: Routes = [   {
   path: '',
@@ -31,6 +32,10 @@ const routes: Routes = [   {
 {
   path: 'conspirators/:id',
   component: ConspiratorsComponent,
+},
+{
+  path: 'satellite/:id',
+  component: SatelliteComponent,
 },
 ];
 
