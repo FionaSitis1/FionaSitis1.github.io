@@ -1,8 +1,15 @@
 [
     {
+        "title":"Satellite",
+        "intro": "ABO，破镜重圆，一个关于星星相遇和命运的故事，记录一点2024年的爱.特殊设定是AO标记后平时身上不会有味道",
+        "last_updated": "Septeber 27 2024",
+        "link": "/satellite",
+        "img": "assets/image/image5.jpg"
+    },
+    {
         "title":"Somebody to Love",
         "intro": "彻底疯狂！全面造反！刘恋是0！是0！是0！",
-        "last_updated": "August 16 2024",
+        "last_updated": "August 20 2024",
         "link": "/somebody-to-love",
         "img": "assets/image/image1.jpg"
     },
