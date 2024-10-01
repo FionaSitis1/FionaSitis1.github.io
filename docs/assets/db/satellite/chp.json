@@ -2,6 +2,7 @@
     {
       "id": 1,
       "linkName": "Chapter 1"
+<<<<<<< HEAD
     },
 
     {
@@ -9,4 +10,7 @@
       "linkName": "Chapter 2"
     }
 
+=======
+    }
+>>>>>>> 7bda45fcf53f62b3a5cc720911d1c2850cc4d9e6
 ]

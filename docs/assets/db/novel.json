@@ -2,7 +2,11 @@
     {
         "title":"Satellite",
         "intro": "ABO，破镜重圆，一个关于星星相遇和命运的故事，记录一点2024年的爱.特殊设定是AO标记后平时身上不会有味道",
+<<<<<<< HEAD
         "last_updated": "October 1 2024",
+=======
+        "last_updated": "Septeber 27 2024",
+>>>>>>> 7bda45fcf53f62b3a5cc720911d1c2850cc4d9e6
         "link": "/satellite",
         "img": "assets/image/image5.jpg"
     },
