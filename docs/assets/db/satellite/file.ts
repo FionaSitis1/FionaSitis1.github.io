@@ -1882,8 +1882,8 @@ export const satelliteBLOGS: Blog[] = [
                     'Fail better. 失败得更好',
                     '   ',
                     'Samuel Beckett，The Unnamable',
-                    'I can`t go on 我无法前进',
-                    'I`ll go on 我将继续前进',
+                    'I can’t go on 我无法前进',
+                    'I’ll go on 我将继续前进',
 
             ]
         }
