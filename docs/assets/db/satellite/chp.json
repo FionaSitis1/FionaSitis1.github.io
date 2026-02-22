@@ -32,8 +32,17 @@
     {
       "id": 7,
       "linkName": "Chapter 7"
-    }
+    },
 
+    {
+      "id": 8,
+      "linkName": "Chapter 8"
+    },
+
+    {
+      "id": 9,
+      "linkName": "Chapter 9"
+    }
 
 
 ]
